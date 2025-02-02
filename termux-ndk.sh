@@ -5,7 +5,7 @@ sdk_dir=$install_dir/android-sdk
 cmake_dir=$sdk_dir/cmake
 ndk_dir="$sdk_dir/ndk"
 ndk_file_name="android-ndk.tar.zst"
-ndk_url="https://github.com/Party233/dexvmp/releases/download/android-ndk-r25c-ollvm/$ndk_file_name"
+ndk_url="https://github.com/Party233/DexVMP/releases/download/android-ndk-r25c-ollvm/$ndk_file_name"
 ndk_installed=false
 cmake_installed=false
 

@@ -1,37 +1,33 @@
 # DexVMP
 
-Run dalvik bytecode based on dex-vm to protect dex
+[English](README_en.md)
 
-## Modification Instructions
+基于dex-vm运行dalvik字节码从而对dex进行保护，增加反编译难度。
 
-Below are the steps to modify and enhance the DexVMP:
+## 修改说明：
 
-### 1. Merge VM Library
-Combine the VM library.
+以下是一些简单的修改说明(没啥特别的主要方便)：
 
-### 2. Random String Encryption
-Apply random string encryption to obfuscate the code.
+### 1. 合并vm库
 
-### 3. Custom VM Class Name
-Specify a custom class name for the VM.
+### 2. 添加ollvm混淆
 
-### 4. Custom VM Library Name
-Define a custom name for the VM library.
+### 3. 随机字符串加密
 
-### 5. Customized VM Registration Name
-Set a custom registration name for the VM.
+### 4. 自定义vm类名
 
-### 6. Support Synthetic Method Protection
-Enable protection for synthetic methods.
+### 5. 自定义vm库名
 
-## Configuration
+### 6. 自定义vm注册名
 
-### Termux command Install NDK [r25c](https://github.com/Party233/dexvmp/releases/tag/ollvm):
+### 7. 支持synthetic方法保护
+
+### Termux一键安装NDK(支持ollvm)[r25c](https://github.com/Party233/DexVMP/releases/tag/android-ndk-r25c-ollvm):
 ```
-cd && pkg upgrade && pkg install wget && wget https://github.com/Party233/dexvmp/raw/master/termux-ndk.sh --no-verbose --show-progress -N && chmod +x termux-ndk.sh && bash termux-ndk.sh
+cd && pkg upgrade && pkg install wget && wget https://github.com/Party233/DexVMP/raw/master/termux-ndk.sh --no-verbose --show-progress -N && chmod +x termux-ndk.sh && bash termux-ndk.sh
 ```
 
-### Set up NDK and Environment Variables
+### 设置NDK和环境变量(可自行配置)
 
 ```bash
 export SDK_PATH=/data/user/0/com.termux/files/home/android-sdk
@@ -39,20 +35,20 @@ export NDK_PATH=/data/user/0/com.termux/files/home/android-sdk/ndk/25.2.9519653
 export CMAKE_PATH=/data/user/0/com.termux/files/home/android-sdk/cmake/3.22.1
 ```  
 
-### Start VM Protection(Termux)
+### 运行脚本(Termux)
 ![](image.webp)
 ```  bash
 bash start-vm.sh
 ```  
 ![](image2.webp)
-### Console execution.
+### 手动执行
 
 ```  bash
 java -jar vm-protect.jar apk input.apk convertRules.txt mapping.txt
 ```  
 
-## Project Source
+## 项目来源
 
-This project is forked from [nmmp](https://github.com/maoabc/nmmp)
+本项目源自[nmmp](https://github.com/maoabc/nmmp)
 
 ---
